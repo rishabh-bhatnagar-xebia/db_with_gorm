@@ -20,9 +20,6 @@ run-script:
 	cd $(GO_SCRIPT); \
 	DSN="$$DSN" go run main.go;
 
-deletedb:
+delete-db:
 	# Delete the database
 	psql -c "DROP DATABASE IF EXISTS $(DB_NAME)"
-
-current:
-	echo $(PWD)
