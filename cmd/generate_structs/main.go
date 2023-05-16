@@ -48,8 +48,8 @@ func getModulePath(moduleName string) string {
 }
 
 func generateStructs(g *gen.Generator, moduleName string, moduleDependencies []string) {
-	g.OutPath = "v2/out_temp"
-	g.ModelPkgPath = "v2/model_temp"
+	g.OutPath = "../../v2/out_temp"
+	g.ModelPkgPath = "../../v2/model_temp"
 	log.Println("writing module to", g.OutPath)
 	for _, tableName := range moduleDependencies {
 		structMeta := g.GenerateModel(tableName)
