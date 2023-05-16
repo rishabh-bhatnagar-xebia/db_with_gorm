@@ -6,11 +6,8 @@ DB_NAME=temp
 .PHONY: all create-db run-script delete-db
 
 all: create-db apply-sql run-script delete-db
-# all: current
 
 create-db:
-	# Generate a random database name
-	echo "Random database name: $(DB_NAME)"; \
 	psql -c "DROP DATABASE IF EXISTS $(DB_NAME)"
 	psql -c "CREATE DATABASE $(DB_NAME)"
 
